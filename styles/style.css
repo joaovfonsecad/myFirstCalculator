@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background: #000000; */
+    background: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    font-family: Lato;
+    caret-color: transparent;
+}
+
+.calculator{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* min-width: 414px;
+    max-width: 414px;
+    min-height: 896px; */
+    background: rgb(0, 0, 0);
+    /* background: black; */
+    border-radius: 2.5em;
+    /* box-shadow: inset 0 0 1em rgb(100, 100, 100); */
+}
+
+#equalsTemp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .5em;
+  background: black;
+}
+
+#display {
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    font-size: 3em;
+    justify-content: end;
+    height: 40%;
+    background: 0;
+    padding: .2em .5em;
+}
+
+#display p {
+  flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+}
+
+#display-p {
+  font-size: 133%;
+}
+
+.bottom {
+    justify-items: center;
+    align-items: center;
+    height: 50%;
+    background: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 1.5em;
+
+}
+
+.buttons {
+    color: white;
+    box-shadow: 0 0 .4em rgb(150, 150, 150);
+    background: #31313150;
+    /* background: #313131; */
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: 10em;
+    border: 0;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons:hover {
+    opacity: 75%;
+}
+
+.buttons:active {
+    opacity: 200%;
+}
+
+.buttons:link {
+    opacity: 50%;
+}
+
+#one {
+    grid-area: one;
+  }
+
+#two {
+    grid-area: two;
+  }
+
+#three {
+    grid-area: three;
+  }
+
+#four {
+    grid-area: four;
+  }
+
+#five {
+    grid-area: five;
+  }
+
+#six {
+    grid-area: six;
+  }
+
+#seven {
+    grid-area: seven;
+  }
+
+#eight {
+    grid-area: eight;
+  }
+
+#nine {
+    grid-area: nine;
+  }
+
+#zero {
+    grid-area: zero;
+  }
+
+#comma {
+    grid-area: comma;
+}
+
+#plus {
+    grid-area: plus;
+  }
+
+#minus {
+    grid-area: minus;
+  }
+
+#times {
+    grid-area: times;
+  }
+
+#division {
+    grid-area: division;
+  }
+
+#ac {
+    grid-area: ac;
+}
+
+#c {
+    grid-area: c;
+}
+
+#modulus {
+    grid-area: modulus;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+#plus, #minus, #times, #division{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 .3em rgb(150, 150, 150);
+    /* background: #00345f; */
+    /* background: #f69906; */
+}
+
+#equals{
+  box-shadow: 0 0 .3em rgb(202, 255, 195);  
+  background: #73ff0060;
+  /* background: #005f2b; */
+}
+
+#modulus, #comma, #c, #ac {
+    box-shadow: 0 0 .4em rgb(150, 150, 150);
+    background: #58585860;
+    /* background: #585858; */
+    /* color: black; */
+}
+
+#backspace {
+    box-shadow: 0 0 .3em #ff4d4da9;
+    background: #ff000071;
+  /* background: #5f0000; */
+}
+
+.bottom {
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "ac c backspace division"
+      "seven eight nine times"
+      "four five six minus"
+      "one two three plus"
+      "zero zero comma equals";
+  }
+  
