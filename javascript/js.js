@@ -315,6 +315,7 @@ function equals() {
                     for (let j = 3; j < array.length; j++) {
                         temptext += ' ' + array[j];
                     }
+                    dispPrintI(1, (before + ' = ' + temptext));
                     dispPrint(temptext);
                     array = chars();
                     temptext = '';
@@ -330,7 +331,7 @@ function equals() {
                     for (let j = 0; j < array.length - 3; j++) {
                         temptext += array[j] + ' ';
                     }
-                    
+                    dispPrintI(1, (before + ' = ' + temptext));
                     temptext += tempOp;
                     dispPrint(temptext);
                     array = chars();
@@ -352,7 +353,7 @@ function equals() {
                 for (let j = (i + 2); j < array.length; j++) {
                     temptext += ' ' + array[j];
                 }
-                
+                dispPrintI(1, (before + ' = ' + temptext));
                 dispPrint(temptext);
                 array = chars();
                 i = 1;
@@ -360,7 +361,7 @@ function equals() {
             }
         }
 
-        // tempArray = chars();
+        tempArray = chars();
 
         if (tempArray.length > 4){
             while (array.length > 3) {
@@ -377,7 +378,7 @@ function equals() {
             dispPrint(tempOp);
         }
 
-        else {
+        else if (array.length > 1){
             if (tempArray[0] == '-' && tempArray.length < 4) {
             
             }
